@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo 3</title>
+</head>
+<body>
+    <input id="op1" value="2">
+    <span>+</span>
+    <input id="op2" value="3">
+    <span>=</span>
+    <input id="res" value=""><br>
+    <button onclick="calculate()">Calculate</button>
+
+    <script>
+        function calculate() {
+            // Obtém os valores dos campos de entrada
+            const op1 = parseFloat(document.getElementById('op1').value);
+            const op2 = parseFloat(document.getElementById('op2').value);
+            
+            // Verifica se os valores são válidos
+            if (isNaN(op1) || isNaN(op2)) {
+                alert("Por favor, insira números válidos!");
+                return;
+            }
+            
+            // Realiza a soma
+            const result = op1 + op2;
+            
+            // Insere o resultado no campo de resultado
+            document.getElementById('res').value = result;
+        }
+    </script>
+</body>
+</html>
