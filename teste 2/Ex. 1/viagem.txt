@@ -1,0 +1,4 @@
+Aveiro;Albergaria;20;20
+Albergaria;Coimbra;80;60
+Coimbra;Leiria;100;90
+Leiria;Lisboa;120;80
