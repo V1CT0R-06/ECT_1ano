@@ -1,6 +1,6 @@
-def loadTrip(filename):
+def loadTrip(trip):
     trip = []
-    with open(filename, 'r') as file:
+    with open("Ex. 1/viagem.txt", 'r') as file:
         for line in file:
           
             line = line.strip()
@@ -10,9 +10,6 @@ def loadTrip(filename):
             trip.append((cidade_partida, cidade_chegada, float(distancia), int(tempo_minutos)))
     return trip
 
-# Carregar os dados da viagem a partir do ficheiro
-trip_data = loadTrip("Ex. 1/viagem.txt")
-
 # Imprimir os segmentos carregados
-for segmento in trip_data:
-    print(segmento)
+for trip in loadTrip("Ex. 1/viagem.txt"):
+    print(trip)

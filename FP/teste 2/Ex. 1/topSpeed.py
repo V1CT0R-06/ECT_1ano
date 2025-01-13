@@ -1,6 +1,6 @@
-# Função para calcular a velocidade de um segmento
-def calcular_velocidade(segmento):
-    distancia, tempo = segmento[2], segmento[3]
+# Função para calcular a velocidade de um trip
+def calcular_velocidade(trip):
+    distancia, tempo = trip[2], trip[3]
     return distancia / (tempo / 60)  # Convertendo minutos para horas
 
 # Função topSpeed
@@ -17,6 +17,6 @@ trip = [
     ('Leiria', 'Lisboa', 106, 90)
 ]
 
-# Exibir os segmentos em ordem decrescente de velocidade
-for segmento in topSpeed(trip):
-    print(segmento)
+# Exibir os trips em ordem decrescente de velocidade
+for trip in topSpeed(trip):
+    print(trip)

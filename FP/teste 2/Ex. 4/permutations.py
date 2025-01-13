@@ -1,21 +1,16 @@
-def permutations(string):
-    result = []
-    
-    # Se a string tiver só um caractere, a permutação é ela mesma
-    if len(string) == 1:
-        return [string]
-    
-    # Para cada caractere da string
-    for i in range(len(string)):
+def permutations(word):
 
-        char = string[i]  # Separar o caractere atual
-       
-        restante = string[:i] + string[i+1:]  # Restante da string sem o caractere atual
-        
-        # Gerar permutações do restante
-        for perm in permutations(restante):
-            result.append(char + perm)
-    
+    if len(word) == 1:
+        return [word]  # Only one letter, one way
+    result = []
+
+    for i in range(len(word)):
+        first = word[i]
+        rest = word[:i] + word[i+1:]
+
+        for p in permutations(rest):
+            result.append(first + p)
+
     return result
 
 # Teste
