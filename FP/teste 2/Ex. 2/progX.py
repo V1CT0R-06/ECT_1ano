@@ -1,15 +1,17 @@
 def parseTime(s):
     if s.isdigit():
-        return int(s)
+        return int(s)  # Retorna o número diretamente se for apenas dígitos
     
-    elif 'h' in s:  #ver se há um "h" entre os numeros
-        try:
-            horas, minutos = map(int, s.split('h'))
-            return horas * 60 + minutos
-        except ValueError:  #caso não haja, return None
-            return None
-    else:
-        return None
+    if 'h' in s:  # Verifica se a string contém 'h'
+        partes = s.split('h')
+
+        if len(partes) == 2 and partes[0].isdigit() and partes[1].isdigit():
+            horas = int(partes[0])
+            minutos = int(partes[1])
+            
+            return horas * 60 + minutos  # Converte para minutos
+        
+    return None  # Retorna None se a string não for válida
 
 # Exemplo de uso
 print(parseTime("45"))    # 45
