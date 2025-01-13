@@ -5,11 +5,10 @@ def parseTime(s):
     if 'h' in s:  # Verifica se a string contém 'h'
         partes = s.split('h')
 
-        if len(partes) == 2 and partes[0].isdigit() and partes[1].isdigit():
-            horas = int(partes[0])
-            minutos = int(partes[1])
+        horas = int(partes[0])
+        minutos = int(partes[1])
             
-            return horas * 60 + minutos  # Converte para minutos
+        return horas * 60 + minutos  # Converte para minutos
         
     return None  # Retorna None se a string não for válida
 
@@ -17,4 +16,3 @@ def parseTime(s):
 print(parseTime("45"))    # 45
 print(parseTime("3h10"))  # 190
 print(parseTime("abc"))   # None
-

@@ -1,16 +1,17 @@
 def neighbors(roads):
     result = {}
+    
+    for road in roads:
+        city1, city2 = road
 
-    for (city1, city2), dist in roads.items():
+        if city1 not in result:
+            result[city1] = []  # Start list for city1
 
-        if city1 not in result:  # se a cidade 1 não ligar a cidade 2
-            result[city1] = []
+        if city2 not in result:
+            result[city2] = []  # Start list for city2
 
-        if city2 not in result:  # se a cidade 1 não ligar a cidade 2
-            result[city2] = []
-
-        result[city1].append((city2, dist))
-        result[city2].append((city1, dist))
+        result[city1].append(city2)  # Add city2 to city1’s list
+        result[city2].append(city1)  # Add city1 to city2’s list
 
     return result
 
@@ -22,4 +23,5 @@ roads = {
     ("Porto", "Braga"): 55
 }
 
+print(neighbors(roads))
 # deve dar algo tipo: "Aveiro": ["Porto", "Coimbra"], ...

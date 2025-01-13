@@ -8,18 +8,19 @@ def distance(roads, local1, local2):
     else:
         return None
 
-def travelDistance(roads, itinerary):
-    total_distance = 0
+def travelDistance(roads, cities):
+    total = 0
 
-    for city1, city2 in zip(itinerary, itinerary[1:]):
-        dist = distance(roads, city1, city2)
+    for i in range(len(cities) - 1):
+
+        d = distance(roads, cities[i], cities[i + 1])
         
-        if dist is None:
-            return None
-        total_distance += dist
+        if d is None:
+            return None  # No road here, stop!
+        
+        total += d  # Add the distance
 
-    return total_distance
-
+    return total
 
 roads = {
     ("Aveiro", "Porto"): 70,
