@@ -7,30 +7,27 @@ roads = {
 }
 
 def distance(roads, city1, city2):
-    if (city1, city2) in roads:       #distancia numa direcao
+    if (city1, city2) or (city1, city2) in roads: #distancia nas duas direções
         return roads[(city1, city2)]
-    
-    elif (city2, city1) in roads:     #as estradas podem ser bidirecionais
-        return roads[(city2, city1)]
     
     else:
         return None
-
+    
 #função anterior ^
 
 def travelDistance(roads, cities):
-    total = 0
-    i = 0  # Start from the first city
+    totaldist = 0
 
-    while i+1 < len(cities):  # +1 para que não ultrapasse o total de cidades
-        d = distance(roads, cities[i], cities[i+1])  # Get distance between two cities
+    for i in range(len(cities) - 1):  # Loop through each pair of cities
+        city1 = cities[i]
+        city2 = cities[i + 1]
+        d = distance(roads, city1, city2)
 
-        if d is None:
-            return None  # No road here, stop!
+        if d is None:  # No road between these cities
+            return None
 
-        total += d  # Add the distance
-        i += 1  # Move to the next pair of cities
+        totaldist = totaldist + d  # Add distance to total
 
-    return total
+    return totaldist
 
 print(travelDistance(roads, ["Aveiro", "Porto", "Lisboa"]))  # Should return 350 (70 + 280)

@@ -8,11 +8,8 @@ roads = {
 }
 
 def distance(roads, city1, city2):
-    if (city1, city2) in roads:       #distancia numa direcao
+    if (city1, city2) or (city1, city2) in roads: #distancia nas duas direções
         return roads[(city1, city2)]
-    
-    elif (city2, city1) in roads:     #as estradas podem ser bidirecionais
-        return roads[(city2, city1)]
     
     else:
         return None
