@@ -7,12 +7,12 @@ roads = {
     ("Porto", "Braga"): 55
 }
 
-def distance(roads, local1, local2):
-    if (local1, local2) in roads:       #distancia numa direcao
-        return roads[(local1, local2)]
+def distance(roads, city1, city2):
+    if (city1, city2) in roads:       #distancia numa direcao
+        return roads[(city1, city2)]
     
-    elif (local2, local1) in roads:     #as estradas podem ser bidirecionais
-        return roads[(local2, local1)]
+    elif (city2, city1) in roads:     #as estradas podem ser bidirecionais
+        return roads[(city2, city1)]
     
     else:
         return None
