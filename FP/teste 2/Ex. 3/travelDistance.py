@@ -21,13 +21,12 @@ def travelDistance(roads, cities):
     for i in range(len(cities) - 1):  # Loop through each pair of cities
         city1 = cities[i]
         city2 = cities[i + 1]
-        d = distance(roads, city1, city2)
+        
+        totaldist += distance(roads, city1, city2)
 
-        if d is None:  # No road between these cities
+        if totaldist is None:  # No road between these cities
             return None
-
-        totaldist = totaldist + d  # Add distance to total
-
+        
     return totaldist
 
 print(travelDistance(roads, ["Aveiro", "Porto", "Lisboa"]))  # Should return 350 (70 + 280)
