@@ -18,7 +18,7 @@ def distance(roads, city1, city2):
 def travelDistance(roads, cities):
     totaldist = 0
 
-    for i + 1 in range(len(cities)):  # Loop through each pair of cities
+    for i in range(len(cities)-1):  # Loop through each pair of cities
         city1 = cities[i]
         city2 = cities[i + 1]
         
