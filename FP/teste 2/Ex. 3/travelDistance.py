@@ -30,3 +30,19 @@ def travelDistance(roads, cities):
     return totaldist
 
 print(travelDistance(roads, ["Aveiro", "Porto", "Lisboa"]))  # Should return 350 (70 + 280)
+
+def Distance(roads, cities):
+    totaldist = 0
+
+    for i in range(len(cities)-1):
+        city1 = cities[i]
+        city2 = cities[i+1]
+
+        totaldist += distance(roads, city1, city2)
+
+        if totaldist is None:
+            return None
+    
+    return totaldist
+
+print(Distance(roads, ["Aveiro", "Porto", "Lisboa"]))  # Should return 350 (70 + 280)

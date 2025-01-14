@@ -45,4 +45,3 @@ def niggas(roads):
     return result
 
 print(niggas(roads))
-
