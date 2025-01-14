@@ -10,9 +10,10 @@ def neighbors(roads):
         if city2 not in result:
             result[city2] = []  # Start list for city2
 
-        result[city1].append(city2)  # Add city2 to city1’s list
-        result[city2].append(city1)  # Add city1 to city2’s list
-
+        else:
+            result[city1].append(city2)  # Add city2 to city1’s list
+            result[city2].append(city1)  # Add city1 to city2’s list
+        
     return result
 
 roads = {
@@ -25,23 +26,3 @@ roads = {
 
 print(neighbors(roads))
 # deve dar algo tipo: "Aveiro": ["Porto", "Coimbra"], ...
-
-
-def niggas(roads):
-    result = {}
-
-    for road in roads:
-        city1, city2 = road
-
-        if city1 not in result:
-            result[city1] = []
-
-        if city2 not in result:
-            result[city2] = []
-
-        result[city1].append(city2)
-        result[city2].append(city2)
-
-    return result
-
-print(niggas(roads))
