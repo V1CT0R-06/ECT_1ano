@@ -5,7 +5,7 @@ def main():
     user = input("what is the number I'm thinking?" , )
     
     while True:
-        if user == 0:
+        if user != 0:
             print ("You win!")
             break
             

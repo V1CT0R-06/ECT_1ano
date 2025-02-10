@@ -1,4 +1,5 @@
 
+
 def hondt(votes, numseats):
     num_parties = len(votes)
     seats = [0] * num_parties

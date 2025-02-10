@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao Estudo de Felinos</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body data-theme="dark">
+    <header>
+        <h1 class="page-title">Estudo de Felinos - Inicio</h1>
+        <button id="themeToggle">Toggle Dark Mode</button>
+    </header>
+    <div class="content">
+        <h2>Bem-vindo ao Estudo Técnico sobre Felinos</h2>
+        <p>Esta é a página de introdução ao nosso projeto sobre felinos. Aqui, exploramos as curiosidades e fatos sobre o mundo dos gatos, incluindo sua anatomia, comportamento, saúde, e muito mais.</p>
+    </div>
+
+    <div class="image-buttons">
+        <div>
+            <div class="image-title">Introdução e Estudo Técnico</div>
+            <a href="main.html" class="image-button">
+                <img src="images/butao_conteudo.jpg" alt="Main Content">
+            </a>
+        </div>
+        <div>
+            <div class="image-title">Sobre o Projeto e Autores</div>
+            <a href="about.html" class="image-button">
+                <img src="images/butao_sobre.jpg" alt="About">
+            </a>
+        </div>
+    </div>
+
+    <div class="image-UA">
+        <a href="https://ua.pt" target="_blank">
+            <img id="UAImage" src="images/ua.png" alt="UA Image">
+        </a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Felinos Estudo. <a href="about.html">Sobre o projeto</a>.</p>
+    </footer>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        themeToggle.addEventListener('click', () => {
+            const isDark = document.body.dataset.theme === 'dark';
+            document.body.dataset.theme = isDark ? 'light' : 'dark';
+            localStorage.setItem('theme', isDark ? 'light' : 'dark');
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.dataset.theme = 'dark';
+        });
+    </script>
+</body>
+</html>

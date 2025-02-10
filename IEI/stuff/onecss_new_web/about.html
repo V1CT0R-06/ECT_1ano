@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre - Estudo Técnico</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body data-theme="dark">
+    <header>
+        <h1 class="page-title">Sobre os Autores</h1>
+        <button id="themeToggle">Toggle Dark Mode</button>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="inicio.html">Início</a></li>
+            <li><a href="main.html">Conteúdo Principal</a></li>
+            <li><a href="about.html">Sobre</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h2>Sobre o Projeto</h2>
+        <p>Este projeto é uma exploração detalhada do mundo dos felinos, abrangendo várias seções como taxonomia, anatomia, comportamento, e muito mais.</p>
+        <p>Nosso objetivo é informar e educar sobre a importância dos gatos na biodiversidade e seu impacto na sociedade e na natureza.</p>
+
+        <h2>About Us</h2>
+        <p>Eu sou o autor deste projeto, um entusiasta de felinos e um apaixonado por explorar as maravilhas da natureza e da ciência.</p>
+    </div>
+    <div class="image-UA">
+        <a href="https://ua.pt" target="_blank">
+            <img id="UAImage" src="images/ua.png" alt="UA Image">
+        </a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Felinos Estudo. <a href="about.html">Sobre o projeto</a>.</p>
+    </footer>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        themeToggle.addEventListener('click', () => {
+            const isDark = document.body.dataset.theme === 'dark';
+            document.body.dataset.theme = isDark ? 'light' : 'dark';
+            localStorage.setItem('theme', isDark ? 'light' : 'dark');
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                document.body.dataset.theme = savedTheme;
+            } else {
+                // Ensure the default theme is dark
+                document.body.dataset.theme = 'dark';
+            }
+        });
+    </script>
+</body>
+</html>

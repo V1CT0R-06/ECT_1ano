@@ -20,7 +20,7 @@ def prank_game():
     time.sleep(1)
 
     # Reveal the "correct" number
-    print(f"\nAh-ha! I know your number! It's {user_number}, isn't it?")
+    print(f"Ah-ha! I know your number! It's {user_number}, isn't it?")
     print("Fuck you nigga!")
 
 # Run the game

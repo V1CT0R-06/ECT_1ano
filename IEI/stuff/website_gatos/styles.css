@@ -1,0 +1,150 @@
+
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+/* Header Styling */
+header {
+    background-color: #495057;
+    color: #ffffff;
+    padding: 1.5rem 0;
+    text-align: center;
+    border-bottom: 4px solid #ced4da;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+
+/* Navigation Bar */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; /* Ensures items wrap to the next line if needed */
+    justify-content: center;
+    background-color: #343a40;
+    border-top: 2px solid #ced4da;
+}
+
+nav ul li {
+    margin: 0.5rem;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    display: block;
+    font-size: 0.9rem;
+    text-align: center;
+    white-space: nowrap; /* Prevent text from breaking into multiple lines */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #6c757d;
+    color: #f8f9fa;
+    border-radius: 5px;
+}
+
+/* Main Content Area */
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+main h2 {
+    font-size: 2rem;
+    color: #495057;
+    border-bottom: 2px solid #ced4da;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #495057;
+    color: #ffffff;
+    font-size: 0.875rem;
+    margin-top: 2rem;
+}
+
+/* Links */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Images */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 1rem auto;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+/* Graphs or Figures */
+figure {
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+figure img {
+    display: inline-block;
+    max-width: 90%;
+    height: auto;
+    margin: 0 auto;
+}
+
+figure figcaption {
+    font-size: 0.875rem;
+    color: #6c757d;
+    margin-top: 0.5rem;
+}
+
+/* Tables (Optional for Graph Data) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    border: 1px solid #ced4da;
+}
+
+table th, table td {
+    border: 1px solid #ced4da;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+table th {
+    background-color: #495057;
+    color: #ffffff;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
