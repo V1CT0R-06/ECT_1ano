@@ -1,0 +1,78 @@
+$comment
+	File created using the following command:
+		vcd file teste.msim.vcd -direction
+$end
+$date
+	Mon Dec  2 15:53:20 2024
+$end
+$version
+	Questa Intel Starter FPGA Edition Version 2021.2
+$end
+$timescale
+	1ps
+$end
+
+$scope module teste_vlg_vec_tst $end
+$var reg 1 ! pin_name1 $end
+$var reg 1 " pin_name2 $end
+$var wire 1 # pin_name3 $end
+
+$scope module i1 $end
+$var wire 1 $ gnd $end
+$var wire 1 % vcc $end
+$var wire 1 & unknown $end
+$var tri1 1 ' devclrn $end
+$var tri1 1 ( devpor $end
+$var tri1 1 ) devoe $end
+$var wire 1 * pin_name3~output_o $end
+$var wire 1 + pin_name1~input_o $end
+$var wire 1 , pin_name2~input_o $end
+$var wire 1 - inst~combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+0#
+0$
+1%
+x&
+1'
+1(
+1)
+0*
+0+
+0,
+0-
+$end
+#120000
+1!
+1+
+#260000
+0!
+0+
+#280000
+1"
+1,
+#500000
+0"
+0,
+#540000
+1!
+1"
+1+
+1,
+1-
+1*
+1#
+#640000
+0!
+0"
+0+
+0,
+0-
+0*
+0#
+#1000000
