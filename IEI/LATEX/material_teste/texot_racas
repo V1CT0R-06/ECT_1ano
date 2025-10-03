@@ -1,0 +1,51 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{geometry}
+\geometry{a4paper, margin=2.5cm}
+
+\title{As Raças de Gatos Mais Caras e Mais Raras do Mundo}
+\author{}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Este relatório apresenta um estudo sobre as raças de gatos mais caras e mais raras do mundo. Exploramos as características, origens e valores associados a cada uma destas raças, destacando as razões que as tornam tão especiais e desejadas pelos amantes de felinos.
+\end{abstract}
+
+\tableofcontents
+
+\newpage
+
+\section{Introdução}
+Os gatos são animais de estimação extremamente populares em todo o mundo, conhecidos pela sua elegância, independência e charme. No entanto, algumas raças destacam-se não só pela sua aparência ou personalidade, mas também pelo seu valor financeiro e pela sua raridade. Este relatório analisa as raças de gatos mais caras e mais raras, explorando o que as torna únicas.
+
+\section{As Raças de Gatos Mais Caras}
+\subsection{Savannah}
+O gato Savannah é uma raça exótica, resultado do cruzamento entre um gato doméstico e um serval africano. É conhecido pelo seu tamanho impressionante, padrões de pêlo que lembram um leopardo e uma personalidade altamente ativa. O preço de um Savannah pode variar entre 4.000 e 20.000 euros, dependendo da geração e da linhagem.
+
+\subsection{Bengal}
+Com um padrão de pêlo que se assemelha ao de um leopardo, o gato Bengal é uma das raças mais populares entre os amantes de gatos exóticos. Além de bonito, é extremamente enérgico e inteligente. Um gato Bengal pode custar entre 2.000 e 10.000 euros.
+
+\subsection{Ashera}
+Considerado a raça de gato mais cara do mundo, o Ashera é comercializado como uma espécie rara, sendo o resultado de manipulação genética. Com características que combinam o Bengal, o Savannah e o gato doméstico, os preços podem ultrapassar os 100.000 euros.
+
+\section{As Raças de Gatos Mais Raras}
+\subsection{Sokoke}
+Originário da floresta de Sokoke, no Quénia, esta raça é incrivelmente rara. É conhecida pelo seu padrão único de pelagem e pela sua natureza independente. Existem poucos exemplares reconhecidos mundialmente.
+
+\subsection{Khao Manee}
+Também chamado de “Jóia Branca”, o Khao Manee é um gato de origem tailandesa, conhecido pela sua pelagem branca pura e olhos que podem ser azuis ou de cores diferentes. Historicamente, esta raça era considerada um símbolo de boa sorte.
+
+\subsection{Lykoi}
+Popularmente conhecido como o “gato-lobisomem”, o Lykoi é uma raça recente e rara. A sua aparência única deve-se a uma mutação genética natural, e a sua pelagem parcial dá-lhe um aspeto selvagem e distinto.
+
+\section{Conclusão}
+As raças de gatos mais caras e mais raras do mundo destacam-se por características que vão além da aparência física. A sua história, genética e exclusividade tornam-nas desejadas por colecionadores e amantes de felinos. Apesar do custo elevado ou da dificuldade em encontrar estas raças, a paixão por gatos exóticos continua a crescer, refletindo a ligação especial entre humanos e estes fascinantes animais.
+
+\end{document}

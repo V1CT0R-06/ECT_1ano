@@ -1,0 +1,129 @@
+
+/* Base Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+[data-theme="dark"] {
+    background-color: #2b2b2b;
+    color: #e0e0e0;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border-bottom: 2px solid #0056b3;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] header {
+    background-color: #0056b3;
+    border-bottom: 2px solid #003e73;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+#themeToggle {
+    border: none;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#themeToggle:hover {
+    background-color: #e0e0e0;
+}
+
+[data-theme="dark"] #themeToggle {
+    background-color: #555;
+    color: #e0e0e0;
+}
+
+[data-theme="dark"] #themeToggle:hover {
+    background-color: #777;
+}
+
+/* Navigation Styles */
+.nav {
+    display: flex;
+    justify-content: center;
+    background-color: #f8f9fa;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .nav {
+    background-color: #444;
+}
+
+.nav .btn {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.nav .btn:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .nav .btn {
+    background-color: #0056b3;
+}
+
+[data-theme="dark"] .nav .btn:hover {
+    background-color: #003e73;
+}
+
+/* Main Content Styles */
+.body-content {
+    padding: 20px;
+}
+
+section {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] section {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #f8f9fa;
+    color: #555;
+    border-top: 2px solid #ccc;
+}
+
+[data-theme="dark"] footer {
+    background-color: #444;
+    color: #bbb;
+    border-top: 2px solid #555;
+}

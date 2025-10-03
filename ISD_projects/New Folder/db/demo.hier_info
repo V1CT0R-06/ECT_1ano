@@ -1,0 +1,11 @@
+|demo
+Y <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst6.CLK
+CLK => inst5.CLK
+X => inst2.IN0
+X => inst.IN1
+X => inst3.IN1
+X => inst14.IN0
+X => inst13.IN0
+
+

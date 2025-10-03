@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo 4</title>
+    <script>
+        let op = "+"; 
+        
+function operation() {
+    const operationSelect = document.getElementById("operation");
+    op = operationSelect.value;
+    document.getElementById("op-view").textContent = op;
+}
+
+function calculate() {
+    const op1 = parseFloat(document.getElementById('op1').value);
+    const op2 = parseFloat(document.getElementById('op2').value);
+
+    if (isNaN(op1) || isNaN(op2)) {
+        alert("Por favor, insira números válidos!");
+        return;
+    }
+
+    let result;
+
+    switch (op) {
+        case "+":
+            result = op1 + op2;
+            break;
+        case "-":
+            result = op1 - op2;
+            break;
+        default:
+            break;
+            return;
+    }
+
+    document.getElementById('res').value = result;
+}
+
+    </script>
+</head>
+<body>
+    <input id="op1" value="2">
+    <span id="op-view">+</span>
+    <input id="op2" value="3">
+    <span>=</span>
+    <input id="res" value=""><br>
+    <select id="operation" onchange="operation()">
+        <option value="+"> Addition </option>
+        <option value="-"> Subtraction </option>
+    </select>
+    <button onclick="calculate()">Calculate</button>
+</body>
+</html>

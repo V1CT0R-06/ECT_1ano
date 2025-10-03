@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre - Estudo Técnico</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="dark">
+    <header>
+        <h1 class="page-title">Sobre os Autores</h1>
+        <button id="themeToggle">Toggle Dark Mode</button>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="main.html">Conteúdo Principal</a></li>
+            <li><a href="about.html">Sobre</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h2>Sobre o Projeto</h2>
+        <p>Este projeto tem como objetivo não apenas ser um portal informativo, mas também criar uma melhor comunidade, que valorize a convivência saudável entre humanos e os seus companheiros de quatro patas, contribuindo para a promoção de uma sociedade mais responsável e sensível às necessidades dos animais.</p>
+        <p>Gostaríamos de agradecer ao Professor António Manuel Adrego da Rocha por nos proporcionar
+            esta oportunidade de mostrar o nosso conhecimento quanto a programação em HTML, CSS e JavaScript como também pelo mundo animal.</p>
+
+        <h2>Sobre os Autores</h2>
+        <p>Instituição: Universidade de Aveiro.</p>
+        <p>Autores:</p>
+        <ul style="list-style-type: circle;">
+            <li>Victor Morais Nº125478</li>
+            <li>Guilherme Costa Nº125636</li>
+        </ul>
+
+        <div class="github-link" style="margin-top: 20px; display: flex; align-items: left; justify-content: left;">
+            <a href="https://github.com/orgs/detiuaveiro/teams/infor2024-ap-g27/repositories" target="_blank" style="display: flex; align-items: center; text-decoration: none;">
+                <img src="images/github.png" alt="GitHub" style="width: 80px; height: 80px; margin-right: 20px;">
+            </a>
+
+            <a href="https://github.com/orgs/detiuaveiro/teams/infor2024-ap-g27/repositories" target="_blank" style="margin-top: 20px; display: flex; align-items: left; justify-content: left;">
+                <button style="font-size: 20px; color: #ffffff; background-color: #0080ff; border: none; padding: 5px; border-radius: 15px; cursor: pointer;">
+                    O nosso repositório GitHub
+                </button>
+            </a>
+        </div>
+        
+
+        <ul style="list-style-type: circle; text-align: left;">
+            <li>V1CT0R-06 (50%)</li>
+            <li>guilhermec0st4 (50%)</li>
+        </ul>
+
+        <p style="font-size: 30px; color: #ffffff;">Curso: Engenharia de Computadores e Informática.</p>
+
+        <div id="map"></div>
+
+        <div class="image-UA">
+            <a href="https://ua.pt" target="_blank">
+                <img id="UAImage" src="images/ua.png" alt="UA Image">
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Felinos Estudo. <a href="about.html">Sobre o projeto</a>.</p>
+    </footer>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        themeToggle.addEventListener('click', () => {
+            const isDark = document.body.dataset.theme === 'dark';
+            document.body.dataset.theme = isDark ? 'light' : 'dark';
+            localStorage.setItem('theme', isDark ? 'light' : 'dark');
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                document.body.dataset.theme = savedTheme;
+            } else {
+                document.body.dataset.theme = 'dark';
+            }
+
+            // Inicialização do mapa
+            const mapDiv = document.getElementById('map');
+            if (typeof L !== 'undefined') {
+                const map = L.map(mapDiv).setView([40.633, -8.659], 13); // Coordenadas de Aveiro, Portugal
+
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    maxZoom: 19
+                }).addTo(map);
+
+                // Marcador de exemplo
+                L.marker([40.633344054307976, -8.659611320246015]).addTo(map)
+                    .bindPopup('DETI: Departamento de Eletrónica, Telecomunicações e Informática')
+                    .openPopup();
+            } else {
+                console.error("Leaflet library is not loaded.");
+            }
+        });
+    </script>
+</body>
+</html>

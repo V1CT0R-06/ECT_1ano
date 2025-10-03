@@ -1,0 +1,59 @@
+|Mux8_1
+Y <= Mux2_1:mux_2_1_2.OUT
+S[0] => 74157:inst.SEL
+S[1] => Mux2_1:mux2_1_1.S
+S[1] => Mux2_1:mux2_1.S
+S[2] => Mux2_1:mux_2_1_2.S
+X[0] => 74157:inst.A1
+X[1] => 74157:inst.B1
+X[2] => 74157:inst.A2
+X[3] => 74157:inst.B2
+X[4] => 74157:inst.A3
+X[5] => 74157:inst.B3
+X[6] => 74157:inst.A4
+X[7] => 74157:inst.B4
+
+
+|Mux8_1|Mux2_1:mux_2_1_2
+OUT <= OR_1.DB_MAX_OUTPUT_PORT_TYPE
+I[0] => inst.IN0
+I[1] => inst1.IN0
+S => NOT_S.IN0
+S => inst1.IN1
+
+
+|Mux8_1|Mux2_1:mux2_1_1
+OUT <= OR_1.DB_MAX_OUTPUT_PORT_TYPE
+I[0] => inst.IN0
+I[1] => inst1.IN0
+S => NOT_S.IN0
+S => inst1.IN1
+
+
+|Mux8_1|74157:inst
+Y4 <= 25.DB_MAX_OUTPUT_PORT_TYPE
+A4 => 20.IN0
+GN => 12.IN0
+GN => 13.IN0
+SEL => 12.IN1
+SEL => 1.IN0
+B4 => 21.IN0
+Y3 <= 24.DB_MAX_OUTPUT_PORT_TYPE
+A3 => 18.IN0
+B3 => 19.IN0
+Y2 <= 23.DB_MAX_OUTPUT_PORT_TYPE
+A2 => 16.IN0
+B2 => 17.IN0
+Y1 <= 22.DB_MAX_OUTPUT_PORT_TYPE
+A1 => 14.IN0
+B1 => 15.IN0
+
+
+|Mux8_1|Mux2_1:mux2_1
+OUT <= OR_1.DB_MAX_OUTPUT_PORT_TYPE
+I[0] => inst.IN0
+I[1] => inst1.IN0
+S => NOT_S.IN0
+S => inst1.IN1
+
+

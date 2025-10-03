@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<title>Exemplo Temporizador</title>
+    <script>
+        alert("Cuidado com o preto, no racist tho.")
+    function decreaseImage(element){
+        var height = parseInt(element.style.height,10);
+    for( ; height > 0; height--){
+    element.style.height = height+"px";
+    }
+    }
+    function resetImage(element){
+    element.style.display = "block";
+    element.style.height = "930px";
+    element.style.width ="620px";
+    }
+    </script>
+</head>
+<body>
+<h1><n>We might be Down but the vibe will always be Up</n></h1>
+    <img id="img" src="img.jpg" alt="Ups!" style="height: 930px; width: 620px;">
+<div>
+    <button onclick="decreaseImage(document.getElementById(’img’))">Decrease</button>
+    <button onclick="resetImage(document.getElementById(’img’))">Reset</button>
+</div>
+</body>
+</html

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        /* Reduzindo o tamanho do mapa */
+        #map {
+            height: 300px; /* Diminuindo a altura */
+            width: 80%; /* Ajustando a largura */
+            margin: 0 auto; /* Centralizando o mapa */
+        }
+    </style>
+</head>
+<body>
+    <h3>Mapa Interativo da Universidade de Aveiro</h3>
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Coordenadas da Universidade de Aveiro
+        var universidadeAveiro = [40.629540, -8.657072];
+
+        // Criar o mapa centrado na região do distrito de Aveiro com zoom adequado
+        var map = L.map('map').setView([40.629540, -8.657072], 13); // Zoom para visualizar o distrito de Aveiro
+
+        // Adicionar o layer do OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Adicionar um marcador na Universidade de Aveiro
+        L.marker(universidadeAveiro).addTo(map)
+            .bindPopup('Universidade de Aveiro')
+            .openPopup();
+    </script>
+</body>
+</html>
