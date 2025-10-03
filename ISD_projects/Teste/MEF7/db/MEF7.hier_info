@@ -1,8 +1,0 @@
-|MEF7
-output_Y <= inst19.DB_MAX_OUTPUT_PORT_TYPE
-X => gdfx_temp0.IN0
-CLK => Q2.CLK
-CLK => Q0.CLK
-CLK => Q1.CLK
-
-
