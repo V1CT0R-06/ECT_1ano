@@ -21,7 +21,6 @@ def prank_game():
 
     # Reveal the "correct" number
     print(f"Ah-ha! I know your number! It's {user_number}, isn't it?")
-    print("Fuck you nigga!")
-
+    
 # Run the game
 prank_game()
