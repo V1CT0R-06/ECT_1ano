@@ -1,12 +1,25 @@
 
 def parseMDY(date):
-    """Return (year, month, day) from date in MM/DD/YYYY format."""
-    ...
+    parts = date.split('/')
+    if len(parts) == 1:
+        return (int(parts[0]), 0, 0)  # Year only
+    else:
+        month = int(parts[0])
+        day = int(parts[1])
+        year = int(parts[2])
+        return (year, month, day)
 
 
 def yearsBetween(date1, date2):
-    """Return integer number of years between two (y, m, d) dates."""
-    ...
+    year1, month1, day1 = date1
+    year2, month2, day2 = date2
+
+    years_diff = year2 - year1
+
+    if (month2, day2) < (month1, day1):
+        years_diff -= 1
+
+    return years_diff
 
 
 def main():
