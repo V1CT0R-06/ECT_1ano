@@ -6,7 +6,7 @@ def telToName(tel):
          '252': 'Bragança', '253': 'Vila Real', '254': 'Guimarães',
          '255': 'Chaves', '256': 'Miranda do Douro',
          '258': 'Ponte de Lima', '259': 'Valença'}
-    prefix = tel[1:4]
+    prefix = tel[0:3]
     return d.get(prefix, "Unknown area code")
-telephone = input("Enter a telephone number (format: 0XXYYYYYYY): ")
+telephone = input("Enter a telephone number (format: XXYYYYYYY): ")
 print(telToName(telephone))
