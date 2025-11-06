@@ -6,16 +6,16 @@ def nameToTels(name):
         index = nameList.index(name)
         return telList[index]
     else:
-        return None
+        return name, "not in contacts"
 
 def telToNames(tel):
     if tel in telList:
         index = telList.index(tel)
         return nameList[index]
     else:
-        return None
+        return tel
 
-name = input("Enter a name: ")
 tel = input("Enter a telephone number: ")
-print("Telephone number for", name, "is", nameToTels(name))
-print("Name for telephone number", tel, "is", telToNames(tel)) 
+print(telToNames(tel), "IS CALLING") 
+name = input("Enter a name: ")
+print(telToNames(tel), nameToTels(name), "IS CALLING")
