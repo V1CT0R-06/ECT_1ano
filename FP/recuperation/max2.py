@@ -1,13 +1,5 @@
 def max2(a, b):
-    """Return the maximum of two values.
 
-    Args:
-        a: First value.
-        b: Second value.
-
-    Returns:
-        The maximum of a and b.
-    """
     if a > b:
         return a
     else:
