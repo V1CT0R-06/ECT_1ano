@@ -9,6 +9,8 @@ def minmax(lst):
             maximum = num
     return minimum, maximum
 
+
+
 numbers = []
 while True:
     line = input("Enter a number (or press Enter to finish): ")

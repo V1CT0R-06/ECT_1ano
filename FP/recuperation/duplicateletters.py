@@ -18,10 +18,8 @@ def shorten(name):
 print(shorten("Universidade de Aveiro"))          # UA
 
 def remove_adjacent_duplicates(s):
-    # Build a new string without repeated adjacent characters
     result = ""
     for ch in s:
-        # If result is empty or current char is different from last kept char, add it
         if not result or ch != result[-1]:
             result += ch
     return result
