@@ -1,8 +1,8 @@
 def neighbors(roads):
     result = {}
     
-    for road in roads:
-        city1, city2 = road
+    for neigh in roads:
+        city1, city2 = neigh
 
         if city1 not in result:
             result[city1] = []  # Start list for city1
