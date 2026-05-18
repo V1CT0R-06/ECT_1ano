@@ -13,7 +13,7 @@ print(hollowPyramid(1))  # Deve imprimir 1
 print(hollowPyramid(2))  # Deve imprimir 4 
 print(hollowPyramid(3))  # Deve imprimir 8 
 print(hollowPyramid(4))  # Deve imprimir 12
-
+print(hollowPyramid(5))  # Deve imprimir 16
 
 
 def score(guess, secret):
@@ -36,15 +36,22 @@ def score(guess, secret):
 
 # Exemplo de uso:
 print(score("1234", "4271"))  # Deve imprimir (1, 2)
+print(score("3245", "1112"))
 
+users = ["admin", "guest", "guest", "user"]
 
+for u in users:
+	if u == "guest":
+		users.remove(u)
+
+print(users)
 
 def votar():
     votos = {"A": 0, "B": 0, "NULOS": 0}
 
     while True:
-        voto = input("Voto? ")
-        if voto == "END":
+        voto = input("Voto? (A/B/nulo) ")
+        if voto == "":
             break
         elif voto == "A":
             votos["A"] += 1
@@ -61,10 +68,10 @@ def votar():
     print(f"A: {percentual_a:.1f}%")
     print(f"B: {percentual_b:.1f}%")
 
-# Exemplo de uso:
-# Se o usuário digitar: A, B, X, B, END
-# Saída esperada:
-# Nulos: 1
-# A: 33.3%
-# B: 66.7%
 votar()
+
+
+spam = "hello world"
+print(spam.strip().split())
+
+
